@@ -1,0 +1,14 @@
+# Example configuration file, remember to remove "example_"!
+
+#Discord Bot token:
+#To get your bot's token, go to https://discord.com/developers/applications click "New application",
+#click "Bot" on the left bar, click "Add bot" and confirm, then click "Copy" under "Click to reveal token"
+token: ""
+
+# Used to known what category to watch to create channels, and what prefix to append to the channels name
+# Example: guildID:categoryID:Prefix,guildID:categoryID:Prefix,...
+category: ""
+
+#DON'T TOUCH THIS IF YOU DON'T KNOW WHAT YOU ARE DOING:
+#Log level. Possible value are error, warning, informational and debug
+loglevel: "informational"
