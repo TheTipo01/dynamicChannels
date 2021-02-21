@@ -74,7 +74,7 @@ func main() {
 	// Create a new Discord session using the provided bot token.
 	dg, err := discordgo.New("Bot " + token)
 	if err != nil {
-		lit.Error("error creating Discord session,", err)
+		lit.Error("error creating Discord session, %s", err)
 		return
 	}
 
@@ -86,12 +86,12 @@ func main() {
 	// Open a websocket connection to Discord and begin listening.
 	err = dg.Open()
 	if err != nil {
-		lit.Error("error opening connection,", err)
+		lit.Error("error opening connection, %s", err)
 		return
 	}
 
 	// Wait here until CTRL-C or other term signal is received.
-	lit.Info("dynamicChannels is now running.  Press CTRL-C to exit.")
+	lit.Info("dynamicChannels is now running. Press CTRL-C to exit.")
 	sc := make(chan os.Signal, 1)
 	signal.Notify(sc, syscall.SIGINT, syscall.SIGTERM, os.Interrupt, os.Kill)
 	<-sc
